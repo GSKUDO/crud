@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>JWT-PG</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="registerForm">
+      <form action="/routes/get" method="GET">
+        <input type="submit" value="GET">
+      </form>
+      <form action="/routes/add" method="POST">
+          <input placeholder="Nome" class="registerBox" type="text" id="formname" name="formname"><br><br>
+          <input placeholder="E-Mail" class="registerBox" type="text" id="formemail" name="formemail"><br><br>
+          <input placeholder="Telefone" class="registerBox" type="text" id="formphone" name="formphone"><br><br>
+          <input placeholder="Endereço" class="registerBox" type="text" id="formaddress" name="formadress"><br><br>
+          <input placeholder="Senha" class="registerBox" type="text" id="formpassword" name="formpassword"><br><br>
+          <br>
+          <input type="submit" id="registerSubmit" value="ADD">
+      </form>
+      <form action="routes/delete" method="POST">
+        <label for="delete">DELETE: </label>
+        <input type="text" name="delete" id="delete">
+        <input type="submit" value="DELETE">
+      </form>
+  </div>
+
+    <p id="login-status">Not logged in</p>
+
+    <div id="div-login" class="flex">
+      <h1>LOGIN</h1>
+      <form id="form-login" class="flex gap"> 
+        <input type="text" name="email">
+        <input type="password" name="password">
+        <input type="submit" value="LOGIN">
+      </form>
+    </div>
+
+    <div id="div-users" class="flex">
+      <h2>USERS</h2>
+      <button id="button-get-users">GET USERS</button>
+      <ul id="user-list"></ul>
+    </div>
+
+    <div class="flex">
+      <h2>LOGOUT</h2>
+      <button id="button-delete-token">LOGOUT</button>
+    </div>
+  </div>
+  <script type="module" id=""src="jwt-decode.js"></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+
+</html>
